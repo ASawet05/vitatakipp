@@ -31,6 +31,7 @@ Gerçek Chrome ile (puppeteer-core) uygulamayı açıp kullanıcı gibi dener.
 | `web-sayfa.mjs` | Yalnızca web sayfası: manifest/servis çalışanı/"Uygulamayı indir" yok, ekranda Gemini/AI Studio/Firebase/APK/Android ifadesi yok, 390px telefonda taşma yok, veriler yenilemeden sonra tarayıcıda kalır ("Ayşe Örnek" gibi adlar silinmez), dış istek yok. Canlı site için: `node web-sayfa.mjs https://asawet05.github.io/vitatakipp/` |
 | `hesap-kaliciligi.mjs` | Adında "Örnek", "Deneme", "Test", "Misafir" geçen gerçek hesaplar ve verileri sayfa yenilenince silinmez; yalnızca eski sabit kimlikli misafir hesabı temizlenir |
 | `sifre.mjs` | Yerel hesap şifresi: PBKDF2 + kullanıcı başına tuz, Türkçe karakter çakışması yok, eski kayıtların girişte taşınması, hesap silme onayında "sil"/"SİL" |
+| `yedek-geri-yukleme.mjs` | JSON yedek ↔ localStorage tam döngüsü: veri gir → Yedek İndir → hesabı sil → yeni hesap → Yedekten Geri Yükle → profil, ilaçlar, takviyeler, sıvı, tahliller, geçmiş, belirti, hekim notu geri gelir ve yenilemeden sonra kalır (seçili belirtilerin yenilemede silinmesi hatasının testi) |
 | `fotograf-barkod.mjs` | Fotoğraftan barkod okuma (BarcodeDetector yokken ZXing), 0 ile başlayan EAN-13/UPC-A eşleşmesi, kamera izni olmadan galeriden fotoğraf, barkodsuz fotoğrafta ürün uydurmama |
 
 Çalıştırma: `node smoke.mjs` (her biri bağımsızdır).
